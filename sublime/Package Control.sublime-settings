@@ -1,0 +1,19 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"DocBlockr_with_update_capability",
+		"Git",
+		"GitGutter",
+		"JsFormat",
+		"Material Color Scheme",
+		"Material Theme",
+		"Package Control",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-gjslint"
+	]
+}
