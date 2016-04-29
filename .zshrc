@@ -47,7 +47,7 @@ alias du='du -h -d 2'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias ips="ifconfig -a | grep -o 'inet6\? \(\([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\)\|[a-fA-F0-9:]\+\)' | sed -e 's/inet6* //'"
+alias ips="ifconfig | awk '/inet addr/{print substr($2,6)}'"
 
 # Vagrant
 alias vup="vagrant up"
