@@ -40,6 +40,7 @@ alias psa="ps aux"
 alias psg="ps aux | grep"
 alias reload="source ~/.zshrc"
 alias weather="curl wttr.in"
+alias zshrc="subl ~/.zshrc"
 
 # Show human friendly numbers and colors
 alias df="df -h"
@@ -136,5 +137,6 @@ function extract () {
 
 alias csc="cs clean-all && cs play frontend"
 alias csp="cs play frontend"
+alias css="cs status
 alias squish="terminator -l squish"
 export PATH="$PATH:/home/matt/code/coscale:/opt/play"
