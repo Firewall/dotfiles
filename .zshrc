@@ -137,6 +137,6 @@ function extract () {
 
 alias csc="cs clean-all && cs play frontend"
 alias csp="cs play frontend"
-alias css="cs status
+alias css="cs status"
 alias squish="terminator -l squish"
 export PATH="$PATH:/home/matt/code/coscale:/opt/play"
