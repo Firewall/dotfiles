@@ -54,6 +54,7 @@ alias vup="vagrant up"
 alias vsus="vagrant suspend"
 alias vhalt="vagrant halt"
 alias vkill="vagrant destroy"
+alias kubevagrant="export KUBERNETES_PROVIDER=vagrant; ./cluster/kube-up.sh"
 
 # SSH
 alias ssc="ssh -l cs $*"
