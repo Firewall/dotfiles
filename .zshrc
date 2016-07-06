@@ -38,12 +38,12 @@ alias drop="cd ~/Dropbox"
 # General
 alias psa="ps aux"
 alias psg="ps aux | grep"
-alias reload='source ~/.zshrc'
+alias reload="source ~/.zshrc"
 alias weather="curl wttr.in"
 
 # Show human friendly numbers and colors
-alias df='df -h'
-alias du='du -h -d 2'
+alias df="df -h"
+alias du="du -h -d 2"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -67,10 +67,10 @@ alias ga="git add -A"
 alias gc="git checkout"
 alias gb="git branch"
 alias gd="git diff"
-alias gst='git stash'
-alias gsp='git stash pop'
-alias gsa='git stash apply'
-alias gplr='git pull --rebase'
+alias gst="git stash"
+alias gsp="git stash pop"
+alias gsa="git stash apply"
+alias gplr="git pull --rebase"
 
 # Apt shorcuts (Updated for 16.04)
 alias update="sudo apt update"
