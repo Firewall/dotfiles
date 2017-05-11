@@ -17,8 +17,7 @@
             }
         },
         "mark_style": "solid underline",
-        "max_line_length": 300,
-        "no_column_highlights_line": false,
+        "no_column_highlights_line": true,
         "passive_warnings": false,
         "paths": {
             "linux": [],
@@ -38,9 +37,16 @@
             "html (django)": "html",
             "html (rails)": "html",
             "html 5": "html",
+            "javascript (babel)": "javascript",
+            "magicpython": "python",
             "php": "html",
-            "python django": "python"
+            "python django": "python",
+            "pythonimproved": "python"
         },
+        "tooltip_fontsize": "1rem",
+        "tooltip_theme": "Packages/SublimeLinter/tooltip-themes/Default/Default.tooltip-theme",
+        "tooltip_theme_excludes": [],
+        "tooltips": false,
         "warning_color": "DDB700",
         "wrap_find": true
     }
