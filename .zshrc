@@ -15,9 +15,6 @@ source $ZSH/oh-my-zsh.sh
 autoload -U compinit
 compinit
 
-# Load s - https://github.com/haosdent/s
-source /opt/s/s.sh
-
 # Load fzf - https://github.com/junegunn/fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -73,6 +70,8 @@ alias gst="git stash"
 alias gsp="git stash pop"
 alias gsa="git stash apply"
 alias gplr="git pull --rebase"
+#   Improved git log
+#   git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Apt shorcuts (Updated for 16.04)
 alias update="sudo apt update"
@@ -135,8 +134,9 @@ function extract () {
 # | CoScale (Work stuff)                                                       |
 # ------------------------------------------------------------------------------
 
-alias csc="cs clean-all && cs play frontend"
+alias csc="cs clean-all"
 alias csp="cs play frontend"
 alias css="cs status"
-alias squish="terminator -l squish"
+alias cscp="cs clean-all && cs play frontend"
 export PATH="$PATH:/home/matt/code/coscale:/opt/play"
+export GOPATH=$HOME/go
