@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="steeef"
 
-plugins=(git git-flow autojump vagrant rsync autojump bower github docker mvn pip python zsh-syntax-highlighting)
+plugins=(git git-flow-avh autojump vagrant kubectl rsync bower github docker pip python colored-man-pages colorize zsh-syntax-highlighting)
 
 # Load ohmyzsh
 source $ZSH/oh-my-zsh.sh
