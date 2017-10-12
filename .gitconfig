@@ -1,0 +1,39 @@
+[push]
+	default = simple
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+
+	## Spellings
+	ad = add
+	ass = add
+	dff = diff
+	doff = diff
+	emrge = merge
+	idff = diff
+	mergfe = merge
+	oull = pull
+	pish = push
+	pl = pull
+	ps = push
+	psuh = push
+	puhs = push
+	puosh = push
+	pus = push
+	pushy = push
+	satsh = stash
+	tint = init
+	tpull = pull
+	tpush = push
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red italic
+	new = green bold
+[status]
+	showUntrackedFiles = all
+[submodule]
+	fetchJobs = 4
