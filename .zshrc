@@ -65,7 +65,7 @@ alias ssr="ssh -l root $*"
 
 # Git
 alias g="git"
-alias gs="git status"
+alias gs="git status -sb"
 alias gm="git commit -m"
 alias ga="git add -A"
 alias gc="git checkout"
