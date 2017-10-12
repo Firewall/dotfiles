@@ -5,18 +5,22 @@
 	],
 	"installed_packages":
 	[
+		"A File Icon",
+		"Babel",
+		"Color Highlighter",
 		"DocBlockr",
+		"Docker Based Build Systems",
+		"Dockerfile Syntax Highlighting",
+		"Format JSDoc @params",
 		"Git",
 		"GitGutter",
 		"Google Stylesheets Syntax",
 		"JsFormat",
-		"Material Color Scheme",
 		"Material Theme",
 		"Package Control",
 		"SideBarEnhancements",
+		"Skins",
 		"SublimeLinter",
 		"SublimeLinter-gjslint",
-		"Theme - Elementary"
 	]
 }
-
