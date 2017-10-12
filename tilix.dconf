@@ -1,3 +1,19 @@
+[/]
+new-window-inherit-state=true
+unsafe-paste-alert=false
+sidebar-on-right=false
+terminal-title-style='none'
+window-state=132
+theme-variant='dark'
+session-name=' '
+control-scroll-zoom=true
+quake-hide-headerbar=true
+enable-wide-handle=true
+app-title='Terminix'
+warn-vte-config-issue=false
+terminal-title-show-when-single=false
+window-style='normal'
+
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 foreground-color='#EEEEEEEEECEC'
 rewrap-on-resize=true
@@ -6,8 +22,8 @@ dim-color-set=true
 login-shell=true
 palette=['#252525', '#FFFF52525252', '#C3D82C', '#FFC135', '#42A5F5', '#EFEF29292929', '#00ACC1', '#F5F5F5', '#708284', '#FF5252', '#C3D82C', '#FFC135', '#42A5F5', '#EFEF29292929', '#00ACC1', '#F5F5F5']
 badge-color-set=false
-default-size-columns=250
-default-size-rows=40
+default-size-columns=150
+default-size-rows=30
 show-scrollbar=false
 cursor-background-color='#0000F4F48D8D'
 use-system-font=false
@@ -15,7 +31,7 @@ cursor-colors-set=true
 highlight-colors-set=false
 use-theme-colors=false
 terminal-bell='icon'
-font='Monospace 9'
+font='Inconsolata Medium 11'
 allow-bold=true
 scrollback-unlimited=true
 terminal-title='$'
@@ -27,20 +43,6 @@ highlight-foreground-color='#EEEEEEEEECEC'
 
 [profiles]
 default='2b7c4080-0ddd-46c5-8f23-563fd3ba789d'
-
-[/]
-unsafe-paste-alert=false
-sidebar-on-right=false
-terminal-title-style='none'
-theme-variant='dark'
-session-name=' '
-control-scroll-zoom=true
-quake-hide-headerbar=false
-enable-wide-handle=true
-app-title='Terminix'
-warn-vte-config-issue=false
-terminal-title-show-when-single=false
-window-style='normal'
 
 [keybindings]
 session-add-right='<Primary><Shift>e'
