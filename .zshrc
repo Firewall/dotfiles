@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="steeef"
 
-plugins=(git git-flow-avh autojump vagrant kubectl rsync bower github docker pip python colored-man-pages colorize zsh-syntax-highlighting)
+plugins=(git autojump kubectl zsh-syntax-highlighting nvm)
 
 # Load ohmyzsh
 source $ZSH/oh-my-zsh.sh
@@ -29,65 +29,32 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias drop="cd ~/Dropbox"
 
 # General
 alias psa="ps aux"
 alias psg="ps aux | grep"
 alias reload="source ~/.zshrc"
-alias weather="curl wttr.in"
-alias zshrc="subl ~/.zshrc"
+alias zshrc="code ~/.zshrc"
 
-# Show human friendly numbers and colors
-alias df="df -h"
-alias du="du -h -d 2"
-
-# IP addresses
-alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
-alias ips="ifconfig | awk '/inet addr/{print substr($2,6)}'"
-
-# Vagrant
-alias vup="vagrant up"
-alias vsus="vagrant suspend"
-alias vhalt="vagrant halt"
-alias vkill="vagrant destroy"
-
-# Kubernetes
-alias kubevagrant="export KUBERNETES_PROVIDER=vagrant; ./cluster/kube-up.sh"
+# Containers & Kubernetes
 source <(kubectl completion zsh)
 source <(helm completion zsh)
+alias p="podman"
 alias k="kubectl"
-
-# SSH
-alias ssc="ssh -l cs $*"
-alias ssr="ssh -l root $*"
 
 # Git
 alias g="git"
 alias gs="git status -sb"
-alias gm="git commit -m"
-alias ga="git add -A"
-alias gc="git checkout"
-alias gb="git branch"
-alias gd="git diff"
-alias gst="git stash"
-alias gsp="git stash pop"
-alias gsa="git stash apply"
-alias gplr="git pull --rebase"
+
 #   Improved git log
 #   git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
 # Apt shorcuts (Updated for 16.04)
-alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
-alias autoremove="sudo apt autoremove"
-alias install="sudo apt install"
-alias search="apt-cache search"
-
-# Spotify
-alias sn="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-alias sp="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
+alias update="brew update"
+alias upgrade="brew upgrade"
+alias autoremove="brew autoremove"
+alias install="brew install"
+alias search="brew search"
 
 # ------------------------------------------------------------------------------
 # | Functions                                                                  |
@@ -97,16 +64,6 @@ alias sp="dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpr
 # Source: https://github.com/mathiasbynens/dotfiles
 function mkd() {
     mkdir -p "$@" && cd "$@";
-}
-
-# Start an HTTP server from a directory, optionally specifying the port
-# Source: https://github.com/mathiasbynens/dotfiles
-function server() {
-    local port="${1:-8000}";
-    sleep 1 && open "http://localhost:${port}/" &
-    # Set the default Content-Type to `text/plain` instead of `application/octet-stream`
-    # And serve everything as UTF-8 (although not technically correct, this doesn’t break anything for binary files)
-    python -c $'import SimpleHTTPServer;\nmap = SimpleHTTPServer.SimpleHTTPRequestHandler.extensions_map;\nmap[""] = "text/plain";\nfor key, value in map.items():\n\tmap[key] = value + ";charset=UTF-8";\nSimpleHTTPServer.test();' "$port";
 }
 
 # Just extract the file
@@ -134,14 +91,3 @@ function extract () {
         echo "'$1' is not a valid file"
     fi
 }
-
-# ------------------------------------------------------------------------------
-# | CoScale (Work stuff)                                                       |
-# ------------------------------------------------------------------------------
-
-alias csc="cs clean-all"
-alias csp="cs play frontend"
-alias css="cs status"
-alias cscp="cs clean-all && cs play frontend"
-export PATH="$PATH:/home/matt/code/coscale:/opt/play"
-export GOPATH=$HOME/go
